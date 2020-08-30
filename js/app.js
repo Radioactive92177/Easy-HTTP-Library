@@ -18,8 +18,20 @@ const data = {
   body: " This is a custom post",
 };
 
-// POST posts
+// POST method
 http.post("https://jsonplaceholder.typicode.com/posts", data, function (
+  err,
+  post
+) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log(post);
+  }
+});
+
+// PUT method
+http.put("https://jsonplaceholder.typicode.com/posts/1", data, function (
   err,
   post
 ) {
