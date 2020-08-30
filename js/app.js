@@ -1,7 +1,7 @@
 const http = new EasyHTTP();
 
 // GET posts
-http.get("https://jsonplaceholder.typicode.com/postsy", function (
+http.get("https://jsonplaceholder.typicode.com/posts", function (
   err,
   response
 ) {
