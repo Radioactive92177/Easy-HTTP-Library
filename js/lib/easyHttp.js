@@ -1,3 +1,7 @@
+/* 
+An HTTP libarary for rapid development of API apps and projects
+Milestone project from @bradtraversy Javascript course
+*/
 class EasyHttp {
   constructor() {}
 
