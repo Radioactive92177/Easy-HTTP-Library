@@ -31,4 +31,24 @@ class EasyHttp {
       return error;
     }
   };
+
+  // PUT Request
+  put = async (url, data) => {
+    try {
+      // Sending data
+      const response = await fetch(url, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      // Receiving reponse
+      const responseData = await response.json();
+      return responseData;
+    } catch (error) {
+      return error;
+    }
+  };
 }
