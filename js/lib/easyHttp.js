@@ -4,6 +4,7 @@ class EasyHttp {
   // GET Request
   get = async (url) => {
     try {
+      // Fetching data
       const response = await fetch(url);
       const responseData = await response.json();
       return responseData;
@@ -46,6 +47,25 @@ class EasyHttp {
 
       // Receiving reponse
       const responseData = await response.json();
+      return responseData;
+    } catch (error) {
+      return error;
+    }
+  };
+
+  // DELETE Request
+  delete = async (url) => {
+    try {
+      // Sending data to delete
+      const response = await fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json",
+        },
+      });
+
+      // Creating reponse if deleted
+      const responseData = "Resource deleted...";
       return responseData;
     } catch (error) {
       return error;
